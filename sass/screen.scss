@@ -1,0 +1,201 @@
+// ---------------------------------------------------------------------------
+// Imports
+
+@import "base";
+
+/* -------------------------------------------------------------------------*/
+/* Layout */
+
+.container {
+    @include container;
+    @include susy-grid-background;
+
+    @include at-breakpoint($total-columns) {
+        .section {
+            @include container;
+            .section-icon {
+                @include span-columns(2, $total-columns);
+            }
+            .section-content {
+                @include span-columns(5 omega, $total-columns);
+            }
+        }
+        // @include set-container-width;
+    }
+
+    // @include at-breakpoint(12) {
+    //     @include set-container-width;
+    // }
+
+    // @include at-breakpoint(16) {
+    //     @include set-container-width;
+    // }
+}
+
+header,
+.invitation {
+    margin: $grid-padding 0;
+}
+
+/* -------------------------------------------------------------------------*/
+/* Icons */
+
+.section {
+    .icon {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 4.5em 4.5em;
+        display: block;
+        height: 4.5em;
+        margin: 1em auto;
+        width: 4.5em;
+    }
+}
+
+@for $i from 1 to 11 {
+    .section-#{$i} {
+        .icon {
+            background-image: url(../assets/svgs/section-#{$i}.svg);
+        }
+    }
+}
+
+/* -------------------------------------------------------------------------*/
+/* Layout */
+
+header {
+    background-image: url(../assets/svgs/logo.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: block;
+    height: 15em;
+    margin: 0 auto;
+    text-indent: -9999px;
+    width: 100%;
+}
+
+.invitation {
+    background: white;
+    border: 1px solid $border-color;
+    padding: $grid-padding;
+    text-align: center;
+    // @include at-breakpoint(12) {
+    //     @include container;
+    //     // @include susy-grid-background;
+    //     .section {
+    //         &:nth-child(even) {
+    //             @include span-columns(6 alpha);
+    //         }
+    //         &:nth-child(odd) {
+    //             @include span-columns(6 omega);
+    //         }
+    //     }
+    // }
+    // @include at-breakpoint(16) {
+    //     @include container;
+    //     // @include susy-grid-background;
+    //     .section {
+    //         &:nth-child(even) {
+    //             @include span-columns(8 alpha);
+    //         }
+    //         &:nth-child(odd) {
+    //             @include span-columns(8 omega);
+    //         }
+    //     }
+    // }
+}
+
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.section-9 {
+    ul {
+        list-style: none;
+        margin: 1em 0;
+        padding: 0;
+        li > ul {
+            margin: 0;
+            li {
+                display: inline;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                &:before {
+                    content: ", ";
+                }
+                &:last-child {
+                    &:before {
+                        content: " & ";
+                    }
+                }
+                &:first-child {
+                    &:before {
+                        content: "";
+                    }
+                }
+                img {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.section-10 {
+    ul {
+        li {
+            color: $logo-color;
+            font-weight: bold;
+            ul {
+                margin: 1em 0;
+                li {
+                    color: $text-color;
+                    font-weight: normal;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+@include at-breakpoint($total-columns) {
+    .section {
+        text-align: left;
+    }
+    .section-9 {
+        ul {
+            li > ul {
+                clear: left;
+                li {
+                    margin: 1em 0;
+                    width: 50%;
+                    float: left;
+                    &:before { content: none; }
+                    &:last-child {
+                        &:before { content: none; }
+                    }
+                    &:first-child {
+                        &:before { content: none; }
+                    }
+                    img {
+                        border-radius: 5em;
+                        display: inline-block;
+                        margin-right: 1em;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+    .section-10 {
+        li {
+            li {
+                padding-left: 1em;
+            }
+        }
+    }
+}
