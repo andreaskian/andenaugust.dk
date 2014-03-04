@@ -20,16 +20,7 @@
                 @include span-columns(5 omega, $total-columns);
             }
         }
-        // @include set-container-width;
     }
-
-    // @include at-breakpoint(12) {
-    //     @include set-container-width;
-    // }
-
-    // @include at-breakpoint(16) {
-    //     @include set-container-width;
-    // }
 }
 
 header,
@@ -80,30 +71,6 @@ header {
     border: 1px solid $border-color;
     padding: $grid-padding;
     text-align: center;
-    // @include at-breakpoint(12) {
-    //     @include container;
-    //     // @include susy-grid-background;
-    //     .section {
-    //         &:nth-child(even) {
-    //             @include span-columns(6 alpha);
-    //         }
-    //         &:nth-child(odd) {
-    //             @include span-columns(6 omega);
-    //         }
-    //     }
-    // }
-    // @include at-breakpoint(16) {
-    //     @include container;
-    //     // @include susy-grid-background;
-    //     .section {
-    //         &:nth-child(even) {
-    //             @include span-columns(8 alpha);
-    //         }
-    //         &:nth-child(odd) {
-    //             @include span-columns(8 omega);
-    //         }
-    //     }
-    // }
 }
 
 ul, li {
@@ -137,7 +104,7 @@ ul, li {
                         content: "";
                     }
                 }
-                img {
+                .guest__picture {
                     display: none;
                 }
             }
@@ -171,9 +138,9 @@ ul, li {
             li > ul {
                 clear: left;
                 li {
+                    float: left;
                     margin: 1em 0;
                     width: 50%;
-                    float: left;
                     &:before { content: none; }
                     &:last-child {
                         &:before { content: none; }
@@ -181,11 +148,13 @@ ul, li {
                     &:first-child {
                         &:before { content: none; }
                     }
-                    img {
+                    .guest__picture {
                         border-radius: 5em;
                         display: inline-block;
+                        height: 3.125em;
                         margin-right: 1em;
                         vertical-align: middle;
+                        width: 3.125em;
                     }
                 }
             }
@@ -196,6 +165,152 @@ ul, li {
             li {
                 padding-left: 1em;
             }
+        }
+    }
+}
+
+/* -------------------------------------------------------------------------*/
+/* Profile pictures */
+@include at-breakpoint($total-columns) {
+    .guest {
+        i {
+            background: url(../assets/imgs/profile.png);
+        }
+        &.guest--naja i { background: url(http://graph.facebook.com/naja.krohn/picture); }
+        &.guest--jesper-k i { background: url(http://graph.facebook.com/jesperkruse2/picture); }
+        &.guest--lene i { background: url(http://graph.facebook.com/lene.paulli/picture); }
+        &.guest--per i { background: url(http://graph.facebook.com/per.aabentoft/picture); }
+        // &.guest--ida-marie i { background: url(assets/imgs/profile.png); }
+        &.guest--jytte i { background: url(http://graph.facebook.com/1297177200/picture); }
+        &.guest--anders i { background: url(http://graph.facebook.com/anders.rasmussen.5851/picture); }
+        &.guest--tami i { background: url(http://graph.facebook.com/tami.s.krohn/picture); }
+        &.guest--carsten i { background: url(http://graph.facebook.com/carsten.kaldal/picture); }
+        &.guest--iza i { background: url(http://graph.facebook.com/izakrohn/picture); }
+        &.guest--anne i { background: url(http://graph.facebook.com/anne.p.larsen/picture); }
+        &.guest--henrik i { background: url(http://graph.facebook.com/henrik.p.larsen.16/picture); }
+        &.guest--kim i { background: url(http://graph.facebook.com/kim.kruse.56/picture); }
+        &.guest--josephine i { background: url(http://graph.facebook.com/JosephineKryger/picture); }
+        &.guest--ken i { background: url(http://graph.facebook.com/Ken.Kruse157/picture); }
+        &.guest--ann i { background: url(http://graph.facebook.com/1518499013/picture); }
+        &.guest--morten i { background: url(http://graph.facebook.com/mortenbogeskovbrok/picture); }
+        // &.guest--emil i { background: url(assets/imgs/profile.png); }
+        &.guest--pernille i { background: url(http://graph.facebook.com/pernille.bogeskov/picture); }
+        // &.guest--susane i { background: url(assets/imgs/profile.png); }
+        // &.guest--hans i { background: url(assets/imgs/profile.png); }
+        &.guest--birthe i { background: url(http://graph.facebook.com/birthe.sorensen3/picture); }
+        // &.guest--marie i { background: url(assets/imgs/profile.png); }
+        &.guest--anita-n i { background: url(http://graph.facebook.com/anita.nielsen.5055/picture); }
+        &.guest--jorgen i { background: url(http://graph.facebook.com/jorgen.paulli/picture); }
+        &.guest--ulla i { background: url(http://graph.facebook.com/ulla.damgaard.3/picture); }
+        // &.guest--michael i { background: url(assets/imgs/profile.png); }
+        &.guest--maria i { background: url(http://graph.facebook.com/maria.k.krohn/picture); }
+        &.guest--peter i { background: url(http://graph.facebook.com/peter.mikkelsen.5/picture); }
+        &.guest--julie-s i { background: url(http://graph.facebook.com/julie.sanderhoff/picture); }
+        &.guest--jan i { background: url(http://graph.facebook.com/jan.paulli/picture); }
+        // &.guest--henk-emil i { background: url(assets/imgs/profile.png); }
+        // &.guest--jens i { background: url(assets/imgs/profile.png); }
+        // &.guest--kirsten i { background: url(assets/imgs/profile.png); }
+        // &.guest--poul i { background: url(assets/imgs/profile.png); }
+        &.guest--anita i { background: url(http://graph.facebook.com/566539883/picture); }
+        // &.guest--lasse i { background: url(assets/imgs/profile.png); }
+        &.guest--janus i { background: url(http://graph.facebook.com/Janus.Thyson.Damgaard/picture); }
+        // &.guest--ayo i { background: url(assets/imgs/profile.png); }
+        // &.guest--lizette i { background: url(assets/imgs/profile.png); }
+        // &.guest--sune-k i { background: url(assets/imgs/profile.png); }
+        // &.guest--dorthe i { background: url(assets/imgs/profile.png); }
+        &.guest--jonas i { background: url(http://graph.facebook.com/jones.mis/picture); }
+        &.guest--sune i { background: url(http://graph.facebook.com/700115275/picture); }
+        &.guest--julie i { background: url(http://graph.facebook.com/543619805/picture); }
+        &.guest--nick-d i { background: url(http://graph.facebook.com/nick.distler.16/picture); }
+        &.guest--djana i { background: url(http://graph.facebook.com/djana.holmstrom/picture); }
+        // &.guest--nick-n i { background: url(assets/imgs/profile.png); }
+        &.guest--natasja-l i { background: url(http://graph.facebook.com/natasja.laursen.52/picture); }
+        &.guest--omar i { background: url(http://graph.facebook.com/omarryberg.karsbek/picture); }
+        &.guest--christina i { background: url(http://graph.facebook.com/christina.e.christensen.52/picture); }
+        &.guest--mick i { background: url(http://graph.facebook.com/mick.hvid/picture); }
+        &.guest--helene i { background: url(http://graph.facebook.com/helene.fallesen/picture); }
+        &.guest--jesper i { background: url(http://graph.facebook.com/688964791/picture); }
+        &.guest--sarah i { background: url(http://graph.facebook.com/sarah.terndrup/picture); }
+        &.guest--rasmus i { background: url(http://graph.facebook.com/rasmus.s.klemmensen/picture); }
+        &.guest--kristina i { background: url(http://graph.facebook.com/kristina.sylvest/picture); }
+        &.guest--natasja i { background: url(http://graph.facebook.com/natasja.petersen.3/picture); }
+        &.guest--bettina i { background: url(http://graph.facebook.com/bettina.jensen.3958/picture); }
+        &.guest--sara i { background: url(http://graph.facebook.com/sara.jacek.3/picture); }
+        &.guest--katrine i { background: url(http://graph.facebook.com/gorbeline/picture); }
+        &.guest--bjarke i { background: url(http://graph.facebook.com/bjarke.mortensen.3/picture); }
+    }
+}
+
+@media (min--moz-device-pixel-ratio: 1.5),
+       (-o-min-device-pixel-ratio: 3/2),
+       (-webkit-min-device-pixel-ratio: 1.5),
+       (min-device-pixel-ratio: 1.5),
+       (min-resolution: 144dpi),
+       (min-resolution: 1.5dppx) {
+    @include at-breakpoint($total-columns) {
+        .guest {
+            &.guest--naja i { background: url(http://graph.facebook.com/naja.krohn/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            &.guest--jesper-k i { background: url(http://graph.facebook.com/jesperkruse2/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            &.guest--lene i { background: url(http://graph.facebook.com/lene.paulli/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            &.guest--per i { background: url(http://graph.facebook.com/per.aabentoft/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            // &.guest--ida-marie i { background: url(assets/imgs/profile.png); }
+            &.guest--jytte i { background: url(http://graph.facebook.com/1297177200/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            &.guest--anders i { background: url(http://graph.facebook.com/anders.rasmussen.5851/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            &.guest--tami i { background: url(http://graph.facebook.com/tami.s.krohn/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            &.guest--carsten i { background: url(http://graph.facebook.com/carsten.kaldal/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            &.guest--iza i { background: url(http://graph.facebook.com/izakrohn/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            &.guest--anne i { background: url(http://graph.facebook.com/anne.p.larsen/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            &.guest--henrik i { background: url(http://graph.facebook.com/henrik.p.larsen.16/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            &.guest--kim i { background: url(http://graph.facebook.com/kim.kruse.56/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            &.guest--josephine i { background: url(http://graph.facebook.com/JosephineKryger/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            &.guest--ken i { background: url(http://graph.facebook.com/Ken.Kruse157/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            &.guest--ann i { background: url(http://graph.facebook.com/1518499013/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            &.guest--morten i { background: url(http://graph.facebook.com/mortenbogeskovbrok/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            // &.guest--emil i { background: url(assets/imgs/profile.png); }
+            &.guest--pernille i { background: url(http://graph.facebook.com/pernille.bogeskov/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            // &.guest--susane i { background: url(assets/imgs/profile.png); }
+            // &.guest--hans i { background: url(assets/imgs/profile.png); }
+            &.guest--birthe i { background: url(http://graph.facebook.com/birthe.sorensen3/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            // &.guest--marie i { background: url(assets/imgs/profile.png); }
+            &.guest--anita-n i { background: url(http://graph.facebook.com/anita.nielsen.5055/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            &.guest--jorgen i { background: url(http://graph.facebook.com/jorgen.paulli/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            &.guest--ulla i { background: url(http://graph.facebook.com/ulla.damgaard.3/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            // &.guest--michael i { background: url(assets/imgs/profile.png); }
+            &.guest--maria i { background: url(http://graph.facebook.com/maria.k.krohn/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            &.guest--peter i { background: url(http://graph.facebook.com/peter.mikkelsen.5/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            &.guest--julie-s i { background: url(http://graph.facebook.com/julie.sanderhoff/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            &.guest--jan i { background: url(http://graph.facebook.com/jan.paulli/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            // &.guest--henk-emil i { background: url(assets/imgs/profile.png); }
+            // &.guest--jens i { background: url(assets/imgs/profile.png); }
+            // &.guest--kirsten i { background: url(assets/imgs/profile.png); }
+            // &.guest--poul i { background: url(assets/imgs/profile.png); }
+            &.guest--anita i { background: url(http://graph.facebook.com/566539883/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            // &.guest--lasse i { background: url(assets/imgs/profile.png); }
+            &.guest--janus i { background: url(http://graph.facebook.com/Janus.Thyson.Damgaard/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            // &.guest--ayo i { background: url(assets/imgs/profile.png); }
+            // &.guest--lizette i { background: url(assets/imgs/profile.png); }
+            // &.guest--sune-k i { background: url(assets/imgs/profile.png); }
+            // &.guest--dorthe i { background: url(assets/imgs/profile.png); }
+            &.guest--jonas i { background: url(http://graph.facebook.com/jones.mis/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            &.guest--sune i { background: url(http://graph.facebook.com/700115275/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            &.guest--julie i { background: url(http://graph.facebook.com/543619805/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            &.guest--nick-d i { background: url(http://graph.facebook.com/nick.distler.16/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            &.guest--djana i { background: url(http://graph.facebook.com/djana.holmstrom/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            // &.guest--nick-n i { background: url(assets/imgs/profile.png); }
+            &.guest--natasja i { background: url(http://graph.facebook.com/natasja.laursen.52/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            &.guest--omar i { background: url(http://graph.facebook.com/omarryberg.karsbek/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            &.guest--christina i { background: url(http://graph.facebook.com/christina.e.christensen.52/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            &.guest--mick i { background: url(http://graph.facebook.com/mick.hvid/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            &.guest--helene i { background: url(http://graph.facebook.com/helene.fallesen/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            &.guest--jesper i { background: url(http://graph.facebook.com/688964791/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            &.guest--sarah i { background: url(http://graph.facebook.com/sarah.terndrup/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            &.guest--rasmus i { background: url(http://graph.facebook.com/rasmus.s.klemmensen/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            &.guest--kristina i { background: url(http://graph.facebook.com/kristina.sylvest/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            &.guest--natasja i { background: url(http://graph.facebook.com/natasja.petersen.3/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            &.guest--bettina i { background: url(http://graph.facebook.com/bettina.jensen.3958/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            &.guest--sara i { background: url(http://graph.facebook.com/sara.jacek.3/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            &.guest--katrine i { background: url(http://graph.facebook.com/gorbeline/picture?width=100&height=100); background-size: 3.125em 3.125em; }
+            &.guest--bjarke i { background: url(http://graph.facebook.com/bjarke.mortensen.3/picture?width=100&height=100); background-size: 3.125em 3.125em; }
         }
     }
 }
