@@ -117,7 +117,7 @@
 
       }
 
-      $css .= ' .guest.guest--' . $image[0] . ' i{background-position: 0 ' . ( $pos <> 0 ? '-' . $pos . 'px' : '0' ) . '}';
+      $css .= ' .guest.guest--' . $image[0] . ' i{background-position: 0 ' . ( $pos <> 0 ? '-' . ($image_height <> 50 ? $pos/2 : $pos) . 'px' : '0' ) . '}';
 
       imagecopy( $sprite, $tmp, 0, $pos, 0, 0, $image_width, $image_height );
       $pos += $image_height;
