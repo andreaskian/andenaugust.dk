@@ -91,7 +91,7 @@
     $pos  = 0;
     $css  = '/* picture-sprite */';
     $css .= ($image_width <> 50 || $image_height <> 50 ? '@media (min--moz-device-pixel-ratio: 1.5) and (min-width: 37.75em), (-o-min-device-pixel-ratio: 3 / 2) and (min-width: 37.75em), (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 37.75em), (min-device-pixel-ratio: 1.5) and (min-width: 37.75em), (min-resolution: 144dpi) and (min-width: 37.75em), (min-resolution: 1.5dppx) and (min-width: 37.75em){' : '@media (min-width: 37.75em){');
-    $css .= '.guest i{background-image: url(../assets/imgs/' . $dest . ');' . ($image_width <> 50 || $image_height <> 50 ? 'background-size: ' . $image_width . 'px ' . $image_height . 'px' : '') . '}';
+    $css .= '.guest i{background-image: url(../assets/imgs/' . $dest . ');' . ($image_width <> 50 || $image_height <> 50 ? 'background-size: ' . $image_width/2 . 'px ' . $height/2 . 'px' : '') . '}';
 
     foreach ( $images as $image ) {
 
