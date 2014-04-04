@@ -1,4 +1,4 @@
-#!/usr/bin/php
+#!/usr/local/bin/php -q
 <?php
 
   // Debug info
