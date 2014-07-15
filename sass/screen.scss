@@ -8,7 +8,6 @@
 
 .container {
     @include container;
-    @include susy-grid-background;
 
     @include at-breakpoint($total-columns) {
         .section {
@@ -122,7 +121,7 @@ ul, li {
                 li {
                     color: $text-color;
                     font-weight: normal;
-                    margin: 0;
+                    margin: 1em 0;
                 }
             }
         }
