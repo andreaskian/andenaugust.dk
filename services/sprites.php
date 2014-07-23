@@ -27,6 +27,7 @@
     ['morten', 'http://graph.facebook.com/mortenbogeskovbrok/picture'],
     ['emil', 'assets/imgs/profile.png'],
     ['pernille', 'http://graph.facebook.com/pernille.bogeskov/picture'],
+    ['troels', 'http://graph.facebook.com/troels.schmidt.5/picture'],
     ['susane', 'assets/imgs/profile.png'],
     ['hans', 'assets/imgs/profile.png'],
     ['birthe', 'http://graph.facebook.com/birthe.sorensen3/picture'],
