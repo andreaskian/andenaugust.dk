@@ -24,7 +24,7 @@ $show-grid-backgrounds  : false;
 // Kulor Colors
 
 $link-color       : rgb(86, 118, 130);  // Blue
-$background-color : rgb(245, 235, 211); // Sand
+$background-color : #141414; // Black
 $border-color     : rgb(255, 179, 163); // Skin pink
 $icon-color       : rgb(255, 111, 109); // Samond
 $logo-color       : rgb(105, 38, 55);   // Bordeaux
@@ -41,3 +41,8 @@ html, body {
     padding: 0;
 }
 
+iframe {
+  position: absolute;
+  left: 50%;
+  margin-left: -512px;
+}

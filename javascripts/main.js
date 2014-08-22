@@ -1,21 +1,22 @@
-'use strict';
-
-var scrollPos = [];
-
-var getScroll = function() {
-    var doc  = document.documentElement;
-    var left = (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0);
-    var top  = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
-    return [left,top];
-};
-
-var initAnimation = function () {
-    scrollPos = getScroll();
-    if ( scrollPos[1] > 800 ) {
-        document.querySelector('#guestlist').classList.add('animate');
-
-        window.removeEventListener('scroll', initAnimation, false);
-    }
-};
-
-window.addEventListener('scroll', initAnimation, false);
+$(document).ready(function() {
+    $("iframe").each(function(index) {
+        var ratio = $(this).height() / $(this).width();
+        var origHeight = $(this).height();
+        var origWidth  = $(this).width();
+        var self = this;
+        // bind to window with closure that references the
+        // iframe since the iframe doesn't get resize events
+        // until (you know) we resize it.
+        $(window).resize(function() {
+            if($(self).parent().width() > origWidth) {
+                $(self).width(origWidth);
+                $(self).height(origHeight);
+            } else {
+                $(self).width($(self).parent().width());
+                $(self).height($(self).parent().width() * ratio);
+                $(self).css('marginLeft', parseInt($(self).parent().width()/2, 10)*-1 );
+            }
+        });
+    });
+    $(window).resize();
+});
